@@ -1,8 +1,14 @@
 package MyApp;
 
-use Mojo::Base -base;
+sub new { bless +{}, shift }
 
-# Profile of myapp.pl for 39.4ms (of 39.9ms), executing 1771 statements and 398 subroutine calls in 27 source files and 4 string evals.
+# Profile of myapp.pl for 24.2ms (of 24.5ms), executing 1444 statements and 328 subroutine calls in 21 source files and 2 string evals.
+
+# use Mojo::Base -base;
+# Profile of myapp.pl for 37.4ms (of 37.8ms), executing 1771 statements and 398 subroutine calls in 27 source files and 4 string evals.
+
+# use Mo;
+# Profile of myapp.pl for 29.4ms (of 29.8ms), executing 1473 statements and 333 subroutine calls in 22 source files and 2 string evals.
 
 # use Moo;
 # Profile of myapp.pl for 47.3ms (of 47.9ms), executing 2648 statements and 908 subroutine calls in 36 source files and 6 string evals.
@@ -12,6 +18,7 @@ use Mojo::Base -base;
 
 # use Moose;
 # Profile of myapp.pl for 715ms (of 749ms), executing 113714 statements and 52974 subroutine calls in 119 source files and 181 string evals.
+
 
 # エラー時は未定義
 # 含む場合は1

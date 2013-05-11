@@ -16,10 +16,12 @@ my ($target, $begin, $end) = @ARGV;
 my $result = $app->is_ontime($target, $begin, $end);
 if (defined $result) {
   if ($result) {
-    say encode_utf8(qq{$target 時は $begin 時から $end 時の間に含まれる});
+    say encode_utf8(
+      qq{$target 時は $begin 時から $end 時の間に含まれる});
   }
   else {
-    say encode_utf8(qq{$target 時は $begin 時から $end 時の間に含まれない});
+    say encode_utf8(
+      qq{$target 時は $begin 時から $end 時の間に含まれない});
   }
 }
 else {
