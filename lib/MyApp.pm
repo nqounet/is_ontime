@@ -31,17 +31,21 @@ sub is_ontime {
   return unless _validate($begin);
   return unless _validate($end);
 
-  if ($target == $begin) {
-    return 1;
-  }
+  return 1 if $target == $begin;
+
+  my @ontime = (0 .. 23);
+
   if ($end < $begin) {
-    $end += 24;
-    $target += 24 if $target < $begin;
+    my @temp = splice @ontime, $begin;
+    push @temp, splice(@ontime, 0, $end);
+    @ontime = @temp;
   }
-  if ($target >= $begin and $target < $end) {
-    return 1;
+  else {
+    @ontime = splice @ontime, $begin, $end - $begin;
   }
-  return 0;
+
+#  warn "$begin to $end is [@ontime]";
+  return $target ~~ @ontime ? 1 : 0;
 }
 
 # 0から23の整数であることを確認する
@@ -49,12 +53,9 @@ sub is_ontime {
 # 正しくない場合は偽を返す
 sub _validate {
   my ($num) = @_;
-  return unless defined $num;
   return if $num eq '';
-  return if $num =~ /[^0-9]/;
-  return if $num < 0;
-  return if $num > 23;
-  return 1;
+  my @valid = (0 .. 23);
+  return $num ~~ @valid ? 1 : 0;
 }
 
 1;
