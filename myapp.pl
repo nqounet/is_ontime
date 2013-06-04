@@ -2,7 +2,8 @@
 # use Devel::KYTProf; Devel::KYTProf->threshold(100);
 
 use utf8;
-use v5.12;
+use strict;
+use warnings;
 use lib 'lib';
 use MyApp;
 use Encode;
