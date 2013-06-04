@@ -42,7 +42,8 @@
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.12"
+            "Carp::Always" : "0",
+            "perl" : "5.012001"
          }
       },
       "test" : {
