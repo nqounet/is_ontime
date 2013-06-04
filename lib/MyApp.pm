@@ -1,5 +1,6 @@
 package MyApp;
 use v5.12;
+our $VERSION = "0.01";
 
 sub new { bless +{}, shift }
 
@@ -60,3 +61,32 @@ sub _validate {
 }
 
 1;
+__END__
+
+=encoding utf-8
+
+=head1 NAME
+
+MyApp - is ontime
+
+=head1 SYNOPSIS
+
+    use MyApp;
+
+=head1 DESCRIPTION
+
+MyApp is ...
+
+=head1 LICENSE
+
+Copyright (C) nqounet.
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+=head1 AUTHOR
+
+nqounet E<lt>nqou.net@gmail.comE<gt>
+
+=cut
+
