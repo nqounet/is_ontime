@@ -1,6 +1,5 @@
 package MyApp;
-use strict;
-use warnings;
+use v5.12;
 our $VERSION = "0.01";
 
 sub new { bless +{}, shift }

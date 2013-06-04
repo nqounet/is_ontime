@@ -1,4 +1,4 @@
 language: perl
 install: cpanm --installdeps --notest --verbose .
 perl:
-  - 5.14
+  - 5.12

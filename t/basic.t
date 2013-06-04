@@ -1,4 +1,5 @@
 use Test::More;
+use v5.12;
 
 use_ok('MyApp');
 
