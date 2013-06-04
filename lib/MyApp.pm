@@ -1,4 +1,5 @@
 package MyApp;
+use v5.12;
 
 sub new { bless +{}, shift }
 
